@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rat News - Cheese Chronicles</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom animations */
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .slide-down {
+        animation: slideDown 1s forwards;
+    }
+    .slide-up {
+        animation: slideUp 1s forwards;
+    }
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+    @keyframes slideUp {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+    
+  </style>
+</head>
+<body class="bg-gradient-to-b from-yellow-100 via-yellow-50 to-white font-sans">
+  <!-- Navbar -->
+  <nav class="bg-yellow-300 shadow-md py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616490.png" alt="Rat Icon" class="w-10 h-10 animate-wiggle">
+        <h1 class="text-2xl font-bold text-gray-800">Rat News</h1>
+      </div>
+      <ul class="flex space-x-6 text-gray-800 font-medium">
+        <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#latest-news" class="hover:text-blue-600 transition">Latest News</a></li>
+        <li><a href="#about" class="hover:text-blue-600 transition">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-yellow-300 text-center py-12">
+    <h2 class="text-5xl font-extrabold text-gray-800 mb-4 animate-float">Rat News</h2>
+    <p class="text-xl font-light text-gray-700">“Breaking news from the underground – Charlie approved!”</p>
+    <p class="text-xs text-gray-700 mt-2" id="another-dumb-project">Another stupid project by Damien Boisvert</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto p-8">
+    <!-- Welcome Section -->
+    <section id="home" class="bg-yellow-50 rounded-lg shadow-lg p-8 flex flex-col md:flex-row items-center mb-12">
+      <img 
+        src="images/charles_cropped.jpg" 
+        alt="World's best field agent, Charles" 
+        class="w-52 h-52 rounded-full shadow-lg md:mr-8 animate-float"
+      />
+      <div>
+        <h3 class="text-4xl font-extrabold text-gray-800 mb-4">We've got the best field agent.</h3>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          With our award-winning field agent Charles, we bring you the latest news from the underground.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed mt-2">
+          Charles is a rat of many talents. He's a master of disguise<sup>1</sup>, a connoisseur of fine cheeses, and a world-class journalist<sup>2</sup>. (at least when he does his job; he's been known to slack off a bit<sup>3</sup>)
+        </p>
+        <hr>
+        <p class="text-xs text-gray-700 mt-2">
+          <sup>1</sup> There is the problem of his white fur, which makes it impossible to blend in with the shadows.  But he's trying his best. <br />
+          <sup>2</sup> He's also the only journalist we have.  We're working on that.<br />
+          <sup>3</sup> ... or a lot.
+      </div>
+
+      <!-- text at the bottom of the div-->
+    </section>
+
+    <!-- Latest News Section -->
+    <section id="latest-news">
+      <h3 class="text-3xl font-bold text-gray-800 text-center mb-6">Today's Headlines</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Article 1 -->
+        <article class="bg-white rounded-xl shadow-md p-6 border-t-4 border-yellow-400 hover:scale-105 hover:bg-yellow-50 transition transform duration-300">
+          <h4 class="text-xl font-bold text-gray-800 mb-2">🧀 The Great Cheese Robbery</h4>
+          <p class="text-gray-700">
+            Last night, a gang of rats made off with a 5-pound wheel of gouda. Was it the infamous "Squeaky Clean Crew"? Details inside.
+          </p>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="bg-white rounded-xl shadow-md p-6 border-t-4 border-green-400 hover:scale-105 hover:bg-green-50 transition transform duration-300">
+          <h4 class="text-xl font-bold text-gray-800 mb-2">🐭 Mouse Olympics: Speedy Whiskers Wins Again!</h4>
+          <p class="text-gray-700">
+            The annual “Scurry Sprint” saw record-breaking attendance this year. Speedy Whiskers claimed gold with a time of 4.5 seconds!
+          </p>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="bg-white rounded-xl shadow-md p-6 border-t-4 border-red-400 hover:scale-105 hover:bg-red-50 transition transform duration-300">
+          <h4 class="text-xl font-bold text-gray-800 mb-2">🪤 Traps Banned by Rat Council</h4>
+          <p class="text-gray-700">
+            In a historic decision, the Rat Council outlawed mousetraps. Instead, they’re encouraging peaceful cheese-sharing agreements.
+          </p>
+          <p class="text-gray-700">In addition, the Rat Council is voicing their disapproval of using cats as a solution with the problems of too many rats.  The Cat Counsil is... having a word with them.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-800 text-white py-8">
+    <div class="container mx-auto text-center">
+      <p class="text-lg font-semibold">© 2025 Rat News &bull; A Project by Damien Boisvert</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="https://github.com/AlphaGameDeveloper" class="hover:text-yellow-300 transition"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111425.png" alt="GitHub" class="w-6 h-6"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const header = document.querySelector("header");
+        header.classList.add("slide-down");
+        // everything else shows after the header
+        const everythingElse = document.querySelectorAll("main, footer");
+        everythingElse.forEach(element => {
+            element.classList.add("slide-up");
+        });
+
+        setTimeout(() => {
+            const anotherProjectBy = document.getElementById("another-dumb-project");
+            anotherProjectBy.classList.add("slide-up"); 
+        })
+        setTimeout(() => {
+            header.classList.remove("slide-down");
+            everythingElse.forEach(element => {
+                element.classList.remove("slide-up");
+            });
+        }, 1000);
+    })
+</script>
+</html>
